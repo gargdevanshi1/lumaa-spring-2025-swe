@@ -17,10 +17,23 @@ A “Task Management” application using **React + TypeScript** (frontend), **N
 
 ## Implementation and Execution
 
-### 1. Database Setup
+### 1. Backend Setup
+- 'cd lumaa-backend'
+- `npm install` to install dependencies
+- `npm run start` to run the server
+- Environment variables are added in the `.env` file
+   - Database connection string
+   - JWT secret
+ 
+### 2. Frontend Setup
+- In a new terminal, 'cd lumaa-frontend`
+- `npm install` then `npm start` to run
+- App runs locally at http://localhost:3000 in the browser
+
+### 3. Database Setup
 
 - Install the Postgres application on your local system
-- Execute the Migration script
+- Execute the Migration script `psql -U username -d database -f migrations/init.sql`
 - Tables are as follows:
    - **User Model**:
      - `id`: Primary key
@@ -33,17 +46,14 @@ A “Task Management” application using **React + TypeScript** (frontend), **N
      - `isComplete`: boolean (default `false`)
      - `userId` to link tasks to the user who created them
 
-### 2. Backend Setup
-- `npm install` to install dependencies
-- `npm run start` to run the server
-- Environment variables are added in the `.env` file
-   - Database connection string
-   - JWT secret
- 
-### 3. Frontend Setup
-- `npm install` then `npm start` to run.
-- Base URL is added in the `.env` file
-
 ### 4. Error Handling
+- Incorrect credentials are handled with appropriate error messages.
+- Task title is required when adding a new task.
+- Only authenticated users can access the task list.
+- Duplicate registration is prevented for the same user.
 
+### 5. Link to the video 
+https://youtu.be/1jT0yyyi1_A
+
+#### Expected pay: $35/hour
 ---
