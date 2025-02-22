@@ -43,7 +43,7 @@ const LoginPage = () => {
     if(token) {
       navigate("/tasks")
     }
-  },[])
+  },[navigate])
 
   return (
     <Container maxWidth="sm">
