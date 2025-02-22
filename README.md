@@ -15,29 +15,35 @@ A “Task Management” application using **React + TypeScript** (frontend), **N
 
 ---
 
-## Requirements
+## Implementation and Execution
 
-### 1. Tables in the Database
+### 1. Database Setup
 
-- **User Model**:
-  - `id`: Primary key
-  - `username`: Unique string
-  - `password`: Hashed string
-- **Task Model**:
-  - `id`: Primary key
-  - `title`: string
-  - `description`: string (optional)
-  - `isComplete`: boolean (default `false`)
-  - `userId` to link tasks to the user who created them
+- Install the Postgres application on your local system
+- Execute the Migration script
+- Tables are as follows:
+   - **User Model**:
+     - `id`: Primary key
+     - `username`: Unique string
+     - `password`: Hashed string
+   - **Task Model**:
+     - `id`: Primary key
+     - `title`: string
+     - `description`: string (optional)
+     - `isComplete`: boolean (default `false`)
+     - `userId` to link tasks to the user who created them
 
-- **Backend Setup**:
-  - `npm install` to install dependencies
-  - `npm run start` to run the server
-  - Environment variables are added in the `.env` file
-      - Database connection string
-      - JWT secret
-- **Setup**:
-  - `npm install` then `npm start` to run.
-  - Base URL is added in the `.env` fil
+### 2. Backend Setup
+- `npm install` to install dependencies
+- `npm run start` to run the server
+- Environment variables are added in the `.env` file
+   - Database connection string
+   - JWT secret
+ 
+### 3. Frontend Setup
+- `npm install` then `npm start` to run.
+- Base URL is added in the `.env` file
+
+### 4. Error Handling
 
 ---
